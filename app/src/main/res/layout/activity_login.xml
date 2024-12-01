@@ -1,0 +1,75 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#f7f7f7">
+
+    <!-- Image at the top -->
+    <ImageView
+        android:id="@+id/loginImage"
+        android:layout_width="match_parent"
+        android:layout_height="193dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Login Image"
+        android:src="@drawable/login" />
+
+    <!-- Language Selector -->
+
+    <TextView
+        android:id="@+id/languageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Select Language"
+        android:textColor="#333333"
+        android:textSize="22sp" />
+
+    <Spinner
+        android:id="@+id/languageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"
+        android:background="@drawable/spinner_background"/>
+
+    <!-- Phone Number Input -->
+    <EditText
+        android:id="@+id/phoneNumberEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"/>
+
+    <!-- Send OTP Button -->
+    <Button
+        android:id="@+id/sendOtpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send OTP"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- OTP Input (Initially hidden) -->
+    <EditText
+        android:id="@+id/otpEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter OTP"
+        android:inputType="number"
+        android:visibility="gone"
+        android:layout_marginBottom="8dp"
+        android:minHeight="48dp"/>
+
+    <!-- Verify OTP Button (Initially hidden) -->
+    <Button
+        android:id="@+id/verifyOtpButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify OTP"
+        android:visibility="gone"/>
+
+</LinearLayout>
