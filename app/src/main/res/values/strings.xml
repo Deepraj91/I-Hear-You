@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">I Hear You</string>
+    <string name="english_alphabets">English Alphabets</string>
+    <string name="gujarati_alphabets">Gujarati Alphabets</string>
+    <string name="math_sign">Math Sign</string>
+    <string name="numbers">Numbers</string>
     <string-array name="languages">
         <item>English</item>
         <item>Gujarati</item>
