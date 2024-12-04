@@ -1,0 +1,164 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="start">
+
+    <!-- Section 1: Notification Bell and Notepad -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="start"
+        android:layout_marginBottom="16dp">
+
+        <!-- Notification Bell -->
+        <ImageView
+            android:id="@+id/notificationBell"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Notifications"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/notification" />
+
+        <!-- Notepad -->
+        <ImageView
+            android:id="@+id/notepad"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="Notepad"
+            android:src="@drawable/notepad" />
+    </LinearLayout>
+
+    <!-- Section 2: Resources -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Resources"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+        <!-- Grid Layout -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="316dp"
+            android:layout_marginBottom="16dp"
+            android:columnCount="2">
+
+            <!-- Item 1 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Top Image -->
+                <ImageView
+                    android:layout_width="166dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/image_rounded_corners"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img" />
+
+                <!-- Top Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Learning Components"
+                    android:textSize="14sp" />
+
+                <!-- Bottom Image -->
+                <ImageView
+                    android:layout_width="154dp"
+                    android:layout_height="111dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/image_rounded_corners"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_2" />
+
+                <!-- Bottom Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Exercises"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Repeat this structure for other items -->
+
+            <!-- Item 2 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- Top Image -->
+                <ImageView
+                    android:layout_width="183dp"
+                    android:layout_height="122dp"
+                    android:background="@drawable/image_rounded_corners"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_1" />
+
+                <!-- Top Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Gujarati News"
+                    android:textSize="14sp" />
+
+                <!-- Bottom Image -->
+                <ImageView
+                    android:layout_width="172dp"
+                    android:layout_height="105dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/image_rounded_corners"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_3" />
+
+                <!-- Bottom Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Performance"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Item 3 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"></LinearLayout>
+        </GridLayout>
+
+    </LinearLayout>
+    </ScrollView>

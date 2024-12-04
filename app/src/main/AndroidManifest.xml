@@ -12,26 +12,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.IHearYou"
         tools:targetApi="31">
-
-        <!-- Splash Activity -->
+        <activity
+            android:name=".AdminActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ParentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StudentActivity"
+            android:exported="false" /> <!-- Splash Activity -->
         <activity
             android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Login Activity -->
+        </activity> <!-- Login Activity -->
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
-
-        <!-- Main Activity -->
+            android:exported="true" /> <!-- Main Activity -->
         <activity
             android:name=".MainActivity"
             android:exported="true" />
-
     </application>
+
 </manifest>
