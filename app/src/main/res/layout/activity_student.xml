@@ -10,64 +10,55 @@
         android:orientation="vertical"
         android:gravity="start">
 
-    <!-- Section 1: Notification Bell and Notepad -->
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="start"
-        android:layout_marginBottom="16dp">
+        <!-- Section 1: Notification Bell and Notepad -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_marginBottom="16dp">
 
-        <!-- Notification Bell -->
-        <ImageView
-            android:id="@+id/notificationBell"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="Notifications"
-            android:layout_marginEnd="16dp"
-            android:src="@drawable/notification" />
+            <!-- Notification Bell -->
+            <ImageView
+                android:id="@+id/notificationBell"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Notifications"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/notification" />
 
-        <!-- Notepad -->
-        <ImageView
-            android:id="@+id/notepad"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:contentDescription="Notepad"
-            android:src="@drawable/notepad" />
-    </LinearLayout>
+            <!-- Notepad -->
+            <ImageView
+                android:id="@+id/notepad"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="Notepad"
+                android:src="@drawable/notepad" />
+        </LinearLayout>
 
-    <!-- Section 2: Resources -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
+        <!-- Section 2: Resources -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:text="Resources"
             android:textSize="30sp"
-            android:textStyle="bold"/>
-    </LinearLayout>
+            android:textStyle="bold" />
 
         <!-- Grid Layout -->
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="316dp"
-            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content"
             android:columnCount="2">
 
-            <!-- Item 1 -->
+            <!-- Learning Components -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <!-- Top Image -->
                 <ImageView
                     android:layout_width="166dp"
                     android:layout_height="120dp"
@@ -75,26 +66,58 @@
                     android:scaleType="centerCrop"
                     android:src="@drawable/img" />
 
-                <!-- Top Text -->
                 <TextView
+                    android:id="@+id/learningComponents"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:text="Learning Components"
                     android:textSize="14sp" />
+            </LinearLayout>
 
-                <!-- Bottom Image -->
+            <!-- Gujarati News -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
                 <ImageView
-                    android:layout_width="154dp"
-                    android:layout_height="111dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="166dp"
+                    android:layout_height="120dp"
+                    android:background="@drawable/image_rounded_corners"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_1" />
+
+                <TextView
+                    android:id="@+id/gujaratiNews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="Gujarati News"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <!-- Exercises -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="166dp"
+                    android:layout_height="120dp"
                     android:background="@drawable/image_rounded_corners"
                     android:scaleType="centerCrop"
                     android:src="@drawable/img_2" />
 
-                <!-- Bottom Text -->
                 <TextView
+                    android:id="@+id/exercises"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -103,45 +126,23 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Repeat this structure for other items -->
-
-            <!-- Item 2 -->
+            <!-- Performance -->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <!-- Top Image -->
                 <ImageView
-                    android:layout_width="183dp"
-                    android:layout_height="122dp"
-                    android:background="@drawable/image_rounded_corners"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/img_1" />
-
-                <!-- Top Text -->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:gravity="center"
-                    android:text="Gujarati News"
-                    android:textSize="14sp" />
-
-                <!-- Bottom Image -->
-                <ImageView
-                    android:layout_width="172dp"
-                    android:layout_height="105dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_width="166dp"
+                    android:layout_height="120dp"
                     android:background="@drawable/image_rounded_corners"
                     android:scaleType="centerCrop"
                     android:src="@drawable/img_3" />
 
-                <!-- Bottom Text -->
                 <TextView
+                    android:id="@+id/performance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -149,16 +150,40 @@
                     android:text="Performance"
                     android:textSize="14sp" />
             </LinearLayout>
-
-            <!-- Item 3 -->
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical"></LinearLayout>
         </GridLayout>
 
+        <!-- Section 3: Convert Word to Sign -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Convert Word to Sign"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/wordToSign"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translate"
+            android:backgroundTint="#E9B84B"
+            android:textColor="@android:color/white" />
+
+        <!-- Section 4: Convert Sign to Word -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Convert Sign to Word"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/signToWord"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translate"
+            android:backgroundTint="#E9B84B"
+            android:textColor="@android:color/white" />
     </LinearLayout>
-    </ScrollView>
+</ScrollView>

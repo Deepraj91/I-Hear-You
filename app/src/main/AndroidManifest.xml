@@ -13,6 +13,30 @@
         android:theme="@style/Theme.IHearYou"
         tools:targetApi="31">
         <activity
+            android:name=".SignToWordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WordToSignActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PerformanceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ExercisesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GujaratiNewsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LearningComponentsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotepadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NotificationActivity"
+            android:exported="false" />
+        <activity
             android:name=".AdminActivity"
             android:exported="false" />
         <activity
