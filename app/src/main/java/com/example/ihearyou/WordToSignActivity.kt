@@ -1,20 +1,38 @@
 package com.example.ihearyou
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
+import android.widget.Button
+import android.widget.EditText
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class WordToSignActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_word_to_sign)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        // Find views by their IDs
+        val backButton = findViewById<ImageView>(R.id.backButton)
+        val translateButton = findViewById<Button>(R.id.translateButton)
+        val inputText = findViewById<EditText>(R.id.inputText)
+
+        // Back button functionality
+        backButton.setOnClickListener {
+            finish() // Close this activity and return to the previous one
+        }
+
+        // Translate button functionality
+        translateButton.setOnClickListener {
+            val text = inputText.text.toString().trim() // Get text from EditText
+            if (text.isNotEmpty()) {
+                val intent = Intent(this, TranslateActivity::class.java)
+                intent.putExtra("text", text) // Pass the entered text to the next activity
+                startActivity(intent) // Start the next activity
+            } else {
+                inputText.error = "Please enter some text to translate!" // Show error if empty
+            }
+
         }
     }
 }
