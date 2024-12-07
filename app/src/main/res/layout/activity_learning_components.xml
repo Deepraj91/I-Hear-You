@@ -26,6 +26,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginTop="16dp"
+            android:background="@drawable/gujarati_alphabets"
             android:layout_centerHorizontal="true" />
 
         <!-- Numbers Section -->
@@ -43,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="16dp"
-            android:background="#E0E0E0" />
+            android:background="@drawable/number" />
 
         <!-- English Alphabets Section -->
         <TextView
@@ -60,7 +61,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="16dp"
-            android:background="#E0E0E0" />
+            android:background="@drawable/english_alphabets" />
 
         <!-- Additional Section -->
         <TextView
@@ -77,7 +78,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_marginBottom="16dp"
-            android:background="#E0E0E0" />
+            android:background="@drawable/math" />
 
     </LinearLayout>
 </ScrollView>
