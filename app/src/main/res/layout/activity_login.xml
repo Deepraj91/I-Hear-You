@@ -24,7 +24,7 @@
         android:layout_marginBottom="12dp"
         android:text="Select Language"
         android:textColor="#333333"
-        android:textSize="22sp" />
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/languageSpinner"
@@ -32,7 +32,7 @@
         android:layout_height="48dp"
         android:layout_marginBottom="24dp"
         android:padding="10dp"
-        android:background="@drawable/spinner_background"/>
+        android:background="@drawable/spinner_background" />
 
     <!-- Role Selector -->
     <TextView
@@ -42,7 +42,7 @@
         android:layout_marginBottom="12dp"
         android:text="Select Role"
         android:textColor="#333333"
-        android:textSize="22sp" />
+        android:textSize="18sp" />
 
     <Spinner
         android:id="@+id/roleSpinner"
@@ -52,11 +52,33 @@
         android:padding="10dp"
         android:background="@drawable/spinner_background" />
 
-    <!-- Go Button -->
-    <Button
-        android:id="@+id/goButton"
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/emailInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go" />
+        android:layout_marginBottom="12dp"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:padding="10dp" />
 
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp" />
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Login" />
 </LinearLayout>

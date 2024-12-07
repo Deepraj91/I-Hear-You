@@ -4,6 +4,7 @@
     <string name="gujarati_alphabets">Gujarati Alphabets</string>
     <string name="math_sign">Math Sign</string>
     <string name="numbers">Numbers</string>
+    <string name="back_button" />
     <string-array name="languages">
         <item>English</item>
         <item>Gujarati</item>

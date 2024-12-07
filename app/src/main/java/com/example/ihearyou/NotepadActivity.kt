@@ -3,6 +3,7 @@ package com.example.ihearyou
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,7 @@ class NotepadActivity : AppCompatActivity() {
 
         val noteEditText: EditText = findViewById(R.id.noteEditText)
         val saveButton: Button = findViewById(R.id.saveButton)
+        val backButton: ImageButton = findViewById(R.id.backButton)
 
         // Restore the saved note (if any)
         savedNote?.let {
@@ -42,6 +44,11 @@ class NotepadActivity : AppCompatActivity() {
                 savedNote = noteText
                 Toast.makeText(this, "Note saved!", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Back button click listener
+        backButton.setOnClickListener {
+            finish() // Finish the current activity and go back to the previous one
         }
     }
 }
