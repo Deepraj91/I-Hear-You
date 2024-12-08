@@ -217,6 +217,8 @@
             android:textSize="30sp"
             android:textStyle="bold" />
 
+
+
         <Button
             android:id="@+id/signToWord"
             android:layout_width="match_parent"

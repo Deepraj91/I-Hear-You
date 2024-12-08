@@ -3,6 +3,7 @@ package com.example.ihearyou
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -17,6 +18,7 @@ class StudentActivity : AppCompatActivity() {
     private lateinit var performance: TextView
     private lateinit var wordToSign: Button
     private lateinit var signToWord: Button
+    private lateinit var noteEditText: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,14 @@ class StudentActivity : AppCompatActivity() {
         performance = findViewById(R.id.performance)
         wordToSign = findViewById(R.id.wordToSign)
         signToWord = findViewById(R.id.signToWord)
+        noteEditText = findViewById(R.id.noteEditText)
+
+        // Ensure EditText doesn't trigger unwanted actions
+        noteEditText.setOnFocusChangeListener { _, hasFocus ->
+            if (hasFocus) {
+                // Do nothing when the EditText gains focus
+            }
+        }
 
         // Set up click listeners
         notificationBell.setOnClickListener { navigateToActivity(NotificationActivity::class.java) }

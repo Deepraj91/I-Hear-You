@@ -15,7 +15,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="16dp"
-        android:background="@android:color/darker_gray"
+        android:background="@drawable/rounded_background"
         android:backgroundTint="#d3d3d3"
         android:gravity="start|top"
         android:hint="Enter text here"
