@@ -17,15 +17,19 @@
         android:textStyle="bold"
         android:textColor="#3E83FF"/>
 
-    <!-- Section: Animals -->
+    <!-- Section: number -->
+
+    <!-- Section: Basics -->
+
     <LinearLayout
         android:id="@+id/animals_section"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="389dp"
+        android:layout_height="81dp"
         android:layout_below="@id/title"
-        android:layout_marginTop="20dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/isl1"
         android:orientation="horizontal"
-        android:background="#2580E4"
         android:padding="10dp">
 
         <TextView
@@ -34,10 +38,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="NUMBER  0/12"
+            android:text="NUMBER  0/2"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <ImageView
             android:layout_width="71dp"
@@ -46,15 +50,15 @@
             android:src="@drawable/number" />
     </LinearLayout>
 
-    <!-- Section: Basics -->
     <LinearLayout
         android:id="@+id/basics_section"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_width="391dp"
+        android:layout_height="91dp"
         android:layout_below="@id/animals_section"
+        android:layout_marginLeft="2dp"
         android:layout_marginTop="10dp"
+        android:background="@drawable/isl2"
         android:orientation="horizontal"
-        android:background="#A2C957"
         android:padding="10dp">
 
         <TextView
@@ -63,10 +67,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_weight="1"
-            android:text="BASICS  0/10"
+            android:text="BASICS  0/2"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <ImageView
             android:layout_width="80dp"

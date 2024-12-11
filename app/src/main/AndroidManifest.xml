@@ -16,6 +16,9 @@
             android:name=".BasicsActivity"
             android:exported="false" />
         <activity
+            android:name=".numberActivity"
+            android:exported="false" />
+        <activity
             android:name=".AnimalsActivity"
             android:exported="false" />
         <activity

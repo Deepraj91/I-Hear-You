@@ -17,7 +17,7 @@ class ExercisesActivity : AppCompatActivity() {
 
         animalsSection.setOnClickListener {
             // Navigate to AnimalsActivity
-            val intent = Intent(this, AnimalsActivity::class.java)
+            val intent = Intent(this, numberActivity::class.java)
             startActivity(intent)
         }
 
