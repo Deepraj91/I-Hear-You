@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#72ABA5"
     android:padding="16dp">
 
     <LinearLayout
@@ -17,45 +18,36 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:gravity="start"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="1">
 
             <!-- Notification Bell -->
             <ImageView
                 android:id="@+id/notificationBell"
-                android:layout_width="40dp"
+                android:layout_width="47dp"
                 android:layout_height="40dp"
-                android:layout_marginEnd="16dp"
+                android:layout_weight="0.2"
                 android:contentDescription="Notifications"
                 android:src="@drawable/notification" />
 
             <!-- Notepad -->
             <ImageView
                 android:id="@+id/notepad"
-                android:layout_width="40dp"
+                android:layout_width="47dp"
                 android:layout_height="40dp"
+                android:layout_weight="0.2"
                 android:contentDescription="Notepad"
                 android:src="@drawable/notepad" />
 
             <!-- Menu -->
             <ImageView
                 android:id="@+id/menu"
-                android:layout_width="50dp"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginLeft="190dp"
+                android:layout_marginLeft="100dp"
+                android:layout_weight="0.6"
                 android:contentDescription="menu"
                 android:src="@drawable/menu" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:gravity="start"
-                android:orientation="horizontal">
-
-
-            </LinearLayout>
-
-
         </LinearLayout>
 
         <!-- Section 2: Resources -->
@@ -68,29 +60,30 @@
             android:textStyle="bold" />
 
         <!-- Grid Layout -->
-
-        <!-- Section 3: Convert Word to Sign -->
-
         <GridLayout
             android:layout_width="match_parent"
-            android:layout_height="351dp"
+            android:layout_height="wrap_content"
             android:columnCount="2"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
             tools:ignore="ExtraText">
 
             <!-- Learning Components -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="12dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:background="@drawable/rounded_rectangle"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <ImageView
                     android:layout_width="166dp"
                     android:layout_height="120dp"
-                    android:background="@drawable/image_rounded_corners"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img" />
+                    android:src="@drawable/learning" />
 
                 <TextView
                     android:id="@+id/learningComponents"
@@ -105,9 +98,11 @@
 
             <!-- Gujarati News -->
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="25dp"
+                android:layout_height="188dp"
+                android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:background="@drawable/rounded_rectangle"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -115,7 +110,7 @@
                     android:layout_width="166dp"
                     android:layout_height="120dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_1" />
+                    android:src="@drawable/poeam1" />
 
                 <TextView
                     android:id="@+id/gujaratiNews"
@@ -124,15 +119,17 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:gravity="center"
-                    android:text="Gujarati News"
+                    android:text="Poem"
                     android:textSize="14sp" />
             </LinearLayout>
 
             <!-- Exercises -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="26dp"
                 android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
                 android:layout_margin="8dp"
+                android:background="@drawable/rounded_rectangle"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -140,7 +137,7 @@
                     android:layout_width="166dp"
                     android:layout_height="120dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_2" />
+                    android:src="@drawable/exercises" />
 
                 <TextView
                     android:id="@+id/exercises"
@@ -153,12 +150,13 @@
                     android:textSize="14sp" />
             </LinearLayout>
 
-            <!-- Performance -->=
-
+            <!-- Performance -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
+                android:layout_columnWeight="1"
+                android:background="@drawable/rounded_rectangle"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -167,7 +165,7 @@
                     android:layout_height="120dp"
                     android:background="@drawable/image_rounded_corners"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_3" />
+                    android:src="@drawable/quiz1" />
 
                 <TextView
                     android:id="@+id/performance"
@@ -176,11 +174,12 @@
                     android:layout_marginTop="8dp"
                     android:layout_marginBottom="8dp"
                     android:gravity="center"
-                    android:text="Performance"
+                    android:text="Quiz"
                     android:textSize="14sp" />
             </LinearLayout>
         </GridLayout>
 
+        <!-- Section 3: Convert Word to Sign -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -191,7 +190,7 @@
 
         <EditText
             android:id="@+id/noteEditText"
-            android:layout_width="327dp"
+            android:layout_width="match_parent"
             android:layout_height="68dp"
             android:layout_marginBottom="10dp"
             android:background="@drawable/rounded_background"
@@ -217,8 +216,6 @@
             android:text="Convert Sign to Word"
             android:textSize="30sp"
             android:textStyle="bold" />
-
-
 
         <Button
             android:id="@+id/signToWord"

@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#AAE4DC"/> <!-- Background color for the shape -->
+    <corners android:radius="16dp"/> <!-- Rounded corners -->
+    <elevation android:value="4dp"/>  <!-- Optional, gives a shadow to the view -->
+</shape>
