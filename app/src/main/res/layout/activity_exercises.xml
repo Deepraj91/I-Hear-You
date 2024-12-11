@@ -1,5 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,9 +14,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="ISL kids"
+        android:textColor="#3E83FF"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:textColor="#3E83FF"/>
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
     <!-- Section: number -->
 
@@ -30,7 +32,8 @@
         android:layout_marginTop="25dp"
         android:background="@drawable/isl1"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        tools:ignore="RtlHardcoded">
 
         <TextView
             android:id="@+id/animals_label"
@@ -41,13 +44,15 @@
             android:text="NUMBER  0/2"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,InefficientWeight" />
 
         <ImageView
             android:layout_width="71dp"
             android:layout_height="80dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/number" />
+            android:src="@drawable/number"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,7 +64,8 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/isl2"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        tools:ignore="RtlHardcoded">
 
         <TextView
             android:id="@+id/basics_label"
@@ -70,13 +76,15 @@
             android:text="BASICS  0/2"
             android:textColor="#FFFFFF"
             android:textSize="16sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            tools:ignore="HardcodedText,InefficientWeight,TextContrastCheck" />
 
         <ImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/car" />
+            android:src="@drawable/car"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 
 </RelativeLayout>
