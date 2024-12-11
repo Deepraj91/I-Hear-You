@@ -13,10 +13,13 @@
         android:theme="@style/Theme.IHearYou"
         tools:targetApi="31">
         <activity
-            android:name=".BasicsActivity"
+            android:name=".numberActivity"
             android:exported="false" />
         <activity
-            android:name=".numberActivity"
+            android:name=".NumberActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BasicsActivity"
             android:exported="false" />
         <activity
             android:name=".AnimalsActivity"
