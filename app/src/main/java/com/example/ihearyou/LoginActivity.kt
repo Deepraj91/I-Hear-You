@@ -7,26 +7,20 @@ import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var emailInput: EditText
-    private lateinit var passwordInput: EditText
     private lateinit var languageSpinner: Spinner
     private lateinit var roleSpinner: Spinner
-    private lateinit var loginButton: Button
-
-    // Default email and password for validation
-    private val defaultEmail = "kushwahadeepraj91@gmail.com"
-    private val defaultPassword = "1234"
+    private lateinit var ageSpinner: Spinner
+    private lateinit var goButton: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
         // Initialize Views
-        emailInput = findViewById(R.id.emailInput)
-        passwordInput = findViewById(R.id.passwordInput)
         languageSpinner = findViewById(R.id.languageSpinner)
         roleSpinner = findViewById(R.id.roleSpinner)
-        loginButton = findViewById(R.id.loginButton)
+        ageSpinner = findViewById(R.id.ageSpinner)
+        goButton = findViewById(R.id.goButton)
 
         // Set up Language Spinner
         val languages = arrayOf("English", "Hindi", "Gujarati")
@@ -40,30 +34,36 @@ class LoginActivity : AppCompatActivity() {
         roleAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         roleSpinner.adapter = roleAdapter
 
-        // Handle Login Button Click
-        loginButton.setOnClickListener {
-            val email = emailInput.text.toString().trim()
-            val password = passwordInput.text.toString().trim()
+        // Set up Age Spinner
+        val ages = arrayOf("Select Age", "1-12", "12-20", "20-46", "46-60", "60+")
+        val ageAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, ages)
+        ageAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        ageSpinner.adapter = ageAdapter
+
+        // Handle Go Button Click
+        goButton.setOnClickListener {
             val selectedLanguage = languageSpinner.selectedItem.toString()
             val selectedRole = roleSpinner.selectedItem.toString()
+            val selectedAge = ageSpinner.selectedItem.toString()
 
-            // Validate Input
-            if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(this, "Please enter email and password", Toast.LENGTH_SHORT).show()
-            } else if (selectedLanguage.isEmpty() || selectedRole.isEmpty()) {
-                Toast.makeText(this, "Please select both language and role", Toast.LENGTH_SHORT).show()
+            // Validate Inputs
+            if (selectedLanguage.isEmpty() || selectedRole.isEmpty() || selectedAge == "Select Age") {
+                Toast.makeText(this, "Please select language, role, and age", Toast.LENGTH_SHORT).show()
             } else {
-                // Check if email and password match the default credentials
-                if (email == defaultEmail && password == defaultPassword) {
-                    // Navigate to the next activity based on role
-                    val intent = when (selectedRole) {
-                        "Student" -> Intent(this, StudentActivity::class.java)
-                        else -> null
-                    }
-                    intent?.putExtra("selectedLanguage", selectedLanguage)
+                // Navigate to the next activity based on role
+                val intent = when (selectedRole) {
+                    "Student" -> Intent(this, StudentActivity::class.java)
+                    "Parent" -> Intent(this, ParentActivity::class.java)
+                    "Admin" -> Intent(this, AdminActivity::class.java)
+                    else -> null
+                }
+
+                if (intent != null) {
+                    intent.putExtra("selectedLanguage", selectedLanguage)
+                    intent.putExtra("selectedAge", selectedAge)
                     startActivity(intent)
                 } else {
-                    Toast.makeText(this, "Invalid email or password", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Invalid role selected", Toast.LENGTH_SHORT).show()
                 }
             }
         }

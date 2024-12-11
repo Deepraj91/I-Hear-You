@@ -1,91 +1,78 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExercisesActivity">
+    android:orientation="vertical"
+    android:background="#A7DBC9">
 
-    <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="0dp"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#F2E380"
-        android:titleTextColor="@android:color/white"
-        app:title="Exercises"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+    <!-- App Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="ISL kids"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#3E83FF"/>
 
-    <!-- Scrollable Content -->
-    <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
+    <!-- Section: Animals -->
+    <LinearLayout
+        android:id="@+id/animals_section"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/title"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:background="#2580E4"
+        android:padding="10dp">
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/animals_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="NUMBER  0/12"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
-            <!-- Exercise Items -->
-            <LinearLayout
-                android:id="@+id/exercise1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="#D5D2D2"
-                android:orientation="horizontal"
-                android:padding="16dp">
+        <ImageView
+            android:layout_width="71dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/number" />
+    </LinearLayout>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:text="1. Gujarati Alphabet"
-                    android:textSize="16sp"
-                    android:id="@+id/exercise1_link" />
+    <!-- Section: Basics -->
+    <LinearLayout
+        android:id="@+id/basics_section"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_below="@id/animals_section"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:background="#A2C957"
+        android:padding="10dp">
 
-            </LinearLayout>
+        <TextView
+            android:id="@+id/basics_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:text="BASICS  0/10"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
 
-            <LinearLayout
-                android:id="@+id/exercise2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="#D5D2D2"
-                android:orientation="horizontal"
-                android:padding="16dp">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/car" />
+    </LinearLayout>
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:text="2. Number 1 to 10"
-                    android:textSize="16sp"
-                    android:id="@+id/exercise2_link" />
-
-            </LinearLayout>
-
-            <ImageView
-                android:id="@+id/backButton"
-                android:layout_width="71dp"
-                android:layout_height="69dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
-                android:contentDescription="@string/back_button"
-                android:src="@drawable/backbutton" />
-
-        </LinearLayout>
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

@@ -34,6 +34,24 @@
         android:padding="10dp"
         android:background="@drawable/spinner_background" />
 
+    <!-- Age Selector -->
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="Select Age"
+        android:textColor="#333333"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/ageSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:padding="10dp"
+        android:background="@drawable/spinner_background" />
+
     <!-- Role Selector -->
     <TextView
         android:id="@+id/roleLabel"
@@ -53,32 +71,10 @@
         android:background="@drawable/spinner_background" />
 
 
-    <!-- Email Input -->
-    <EditText
-        android:id="@+id/emailInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp"
-        android:padding="10dp" />
-
-    <!-- Password Input -->
-    <EditText
-        android:id="@+id/passwordInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:padding="10dp" />
-
-    <!-- Login Button -->
+    <!-- Go Button -->
     <Button
-        android:id="@+id/loginButton"
+        android:id="@+id/goButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login" />
+        android:text="Go" />
 </LinearLayout>
