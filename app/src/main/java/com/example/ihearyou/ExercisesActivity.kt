@@ -1,45 +1,40 @@
 package com.example.ihearyou
 
-import android.annotation.SuppressLint
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import android.view.View
 import android.widget.ImageView
-import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
 class ExercisesActivity : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_exercises)
 
-        val testSection = findViewById<LinearLayout>(R.id.testSection)
+        // URLs for the forms
+        val gujaratiAlphabetUrl = "https://docs.google.com/forms/d/e/1FAIpQLScLkxVm4-KAJWKUs94RVdGLCbnwIvWA_7R44YRLmieW4lqDrw/viewform?usp=header"
+        val numberUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfxtK3pMGE4VjWM2PqaE0bsVnsAtAnrq4SUHsEM-0uPAXuxnQ/viewform?usp=header"
 
-        // Set click listeners for each exercise
-        findViewById<LinearLayout>(R.id.exercise1).setOnClickListener {
-            scrollToTestSection(testSection)
+        // Click listener for Gujarati Alphabet
+        findViewById<TextView>(R.id.exercise1_link).setOnClickListener {
+            openLink(gujaratiAlphabetUrl)
         }
 
-        findViewById<LinearLayout>(R.id.exercise2).setOnClickListener {
-            scrollToTestSection(testSection)
+        // Click listener for Numbers
+        findViewById<TextView>(R.id.exercise2_link).setOnClickListener {
+            openLink(numberUrl)
         }
 
-        findViewById<LinearLayout>(R.id.exercise3).setOnClickListener {
-            scrollToTestSection(testSection)
-        }
-
-        findViewById<LinearLayout>(R.id.exercise4).setOnClickListener {
-            scrollToTestSection(testSection)
-        }
-
-        val backButton: ImageView = findViewById(R.id.backButton)
-        backButton.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed() // Navigate back to the previous screen
+        // Back button navigation
+        findViewById<ImageView>(R.id.backButton).setOnClickListener {
+            onBackPressedDispatcher.onBackPressed()
         }
     }
 
-    private fun scrollToTestSection(testSection: View) {
-        testSection.visibility = View.VISIBLE
-        testSection.requestFocus() // Scrolls to the section
+    // Function to open URL
+    private fun openLink(url: String) {
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
     }
 }

@@ -15,7 +15,7 @@ class LoginActivity : AppCompatActivity() {
 
     // Default email and password for validation
     private val defaultEmail = "kushwahadeepraj91@gmail.com"
-    private val defaultPassword = "number7024313357"
+    private val defaultPassword = "1234"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
