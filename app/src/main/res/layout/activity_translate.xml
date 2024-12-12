@@ -37,168 +37,72 @@
             android:padding="16dp">
 
             <!-- Section 1 -->
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_width="225dp"
+                android:layout_height="232dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:layout_marginBottom="16dp">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="Letter H"
+                    android:layout_width="225dp"
+                    android:layout_height="170dp"
+                    android:layout_marginLeft="100dp"
                     android:layout_marginRight="160dp"
-                    android:src="@drawable/img_4" />
-
+                    android:contentDescription="Letter H"
+                    android:src="@drawable/good" />
             </LinearLayout>
 
             <!-- Section 2 -->
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_width="225dp"
+                android:layout_height="232dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:layout_marginBottom="16dp">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_5"
-                    android:layout_marginRight="170dp"
-                    android:contentDescription="Letter G" />
-
+                    android:layout_width="172dp"
+                    android:layout_height="142dp"
+                    android:layout_marginRight="160dp"
+                    android:contentDescription="Letter H"
+                    android:layout_marginLeft="100dp"
+                    android:src="@drawable/morning" />
             </LinearLayout>
 
             <!-- Section 3 -->
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_width="225dp"
+                android:layout_height="232dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:layout_marginBottom="16dp">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_6"
-                    android:layout_marginRight="290dp"
-                    android:contentDescription="Letter G" />
-
+                    android:layout_width="172dp"
+                    android:layout_height="142dp"
+                    android:layout_marginRight="160dp"
+                    android:contentDescription="Letter H"
+                    android:layout_marginLeft="100dp"
+                    android:src="@drawable/good" />
             </LinearLayout>
 
             <!-- Section 4 -->
-
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
+                android:layout_width="225dp"
+                android:layout_height="232dp"
+                android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:layout_marginBottom="16dp">
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:layout_width="157dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="170dp"
-                    android:contentDescription="Letter G"
-                    android:src="@drawable/img_7" />
-
+                    android:layout_width="172dp"
+                    android:layout_height="142dp"
+                    android:layout_marginRight="160dp"
+                    android:contentDescription="Letter H"
+                    android:layout_marginLeft="100dp"
+                    android:src="@drawable/night" />
             </LinearLayout>
-
-            <!-- Section 5 -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_8"
-                    android:layout_marginRight="190dp"
-                    android:contentDescription="Letter G" />
-
-            </LinearLayout>
-
-
-            <!-- Section 6 -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_9"
-                    android:layout_marginRight="190dp"
-                    android:contentDescription="Letter G" />
-
-            </LinearLayout>
-
-            <!-- Section 7 -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_10"
-                    android:layout_marginRight="190dp"
-                    android:contentDescription="Letter G" />
-
-            </LinearLayout>
-
-            <!-- Section 8 -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_11"
-                    android:layout_marginRight="190dp"
-                    android:contentDescription="Letter G" />
-
-            </LinearLayout>
-
-            <!-- Section 9 -->
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginBottom="16dp">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/img_12"
-                    android:layout_marginRight="10dp"
-                    android:contentDescription="Letter G" />
-
-            </LinearLayout>
-
 
 
         </LinearLayout>
