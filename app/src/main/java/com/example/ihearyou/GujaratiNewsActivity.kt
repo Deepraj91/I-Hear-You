@@ -1,25 +1,25 @@
 package com.example.ihearyou
-
-import android.os.Bundle
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
+import android.os.Bundle
+import android.widget.VideoView
 
 class GujaratiNewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gujarati_news)
 
-        // Find the Toolbar
-        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        val gujaratiVideo: VideoView = findViewById(R.id.gujarati_video)
 
-        // Set up the toolbar with a back button
-        setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setDisplayShowHomeEnabled(true)
+        // Set video URI for the Gujarati VideoView
+        val videoUri = Uri.parse("android.resource://" + packageName + "/" + R.raw.gujarati_alphabets)
+        gujaratiVideo.setVideoURI(videoUri)
 
-        // Handle back button click
-        toolbar.setNavigationOnClickListener {
-            onBackPressed()
+        // Set click listener to play the video
+        gujaratiVideo.setOnClickListener {
+            if (!gujaratiVideo.isPlaying) {
+                gujaratiVideo.start()
+            }
         }
     }
 }

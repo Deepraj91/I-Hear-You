@@ -27,7 +27,7 @@ class LearningComponentsActivity : AppCompatActivity() {
         // Setup video views with respective raw resources
         setupVideoView(gujaratiVideo, R.raw.gujarati_alphabets)
         setupVideoView(numbersVideo, R.raw.numbers)
-        setupVideoView(englishVideo, R.raw.alphabet)
+        setupVideoView(englishVideo, R.raw.alphabets)
         setupVideoView(moreVideo, R.raw.math_signs)
     }
 
